@@ -201,11 +201,11 @@
         heroColor = mix(heroColor, vec3(0.01, 0.012, 0.02), clamp(wVoid * 1.25, 0.0, 0.94));
 
         vec3 aboutColor = vec3(0.015, 0.02, 0.03);
-        vec3 goldAmber = vec3(0.86, 0.62, 0.11);
-        vec3 warmMustard = vec3(0.80, 0.66, 0.14);
-        vec3 deepMagenta = vec3(0.58, 0.08, 0.44);
-        vec3 richViolet = vec3(0.38, 0.06, 0.36);
-        vec3 emeraldMint = vec3(0.14, 0.78, 0.54);
+        vec3 deepIndigo = vec3(0.10, 0.17, 0.34);
+        vec3 richSapphire = vec3(0.14, 0.27, 0.52);
+        vec3 cobaltBlue = vec3(0.18, 0.36, 0.66);
+        vec3 royalBlue = vec3(0.24, 0.44, 0.76);
+        vec3 skyBlue = vec3(0.34, 0.53, 0.82);
         vec2 g1 = vec2(0.12 + 0.07 * sin(t * 1.1), 0.64 + 0.08 * cos(t * 0.9));
         vec2 g2 = vec2(0.14 + 0.08 * cos(t * 0.85), 0.18 + 0.07 * sin(t));
         vec2 magenta = vec2(0.38 + 0.09 * sin(t * 0.8), 0.48 + 0.11 * cos(t * 0.75));
@@ -218,11 +218,11 @@
         float we1 = blob(fluidUV, green1, vec2(0.38, 0.30), -t * 0.3);
         float we2 = blob(fluidUV, green2, vec2(0.32, 0.28), t * 0.2);
         float wd = blob(fluidUV, darkZone, vec2(0.46, 0.42), 0.0);
-        aboutColor = mix(aboutColor, richViolet, clamp(wm * 1.3, 0.0, 1.0));
-        aboutColor = mix(aboutColor, deepMagenta, clamp(wm * 0.95, 0.0, 1.0));
-        aboutColor = mix(aboutColor, goldAmber, clamp(wg1 * 1.15, 0.0, 1.0));
-        aboutColor = mix(aboutColor, warmMustard, clamp(wg2 * 1.1, 0.0, 1.0));
-        aboutColor = mix(aboutColor, emeraldMint, clamp(we1 + we2 * 0.85, 0.0, 1.0));
+        aboutColor = mix(aboutColor, deepIndigo, clamp(wm * 1.3, 0.0, 1.0));
+        aboutColor = mix(aboutColor, richSapphire, clamp(wm * 0.95, 0.0, 1.0));
+        aboutColor = mix(aboutColor, cobaltBlue, clamp(wg1 * 1.15, 0.0, 1.0));
+        aboutColor = mix(aboutColor, royalBlue, clamp(wg2 * 1.1, 0.0, 1.0));
+        aboutColor = mix(aboutColor, skyBlue, clamp(we1 + we2 * 0.85, 0.0, 1.0));
         aboutColor = mix(aboutColor, vec3(0.012, 0.016, 0.024), clamp(wd * 1.15, 0.0, 0.92));
         // Pull the saturated fluid hues toward the dark canvas so foreground text stays clear.
         aboutColor = mix(vec3(0.012, 0.016, 0.024), aboutColor, 0.58);
