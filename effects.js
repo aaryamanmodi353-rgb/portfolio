@@ -224,6 +224,8 @@
         aboutColor = mix(aboutColor, warmMustard, clamp(wg2 * 1.1, 0.0, 1.0));
         aboutColor = mix(aboutColor, emeraldMint, clamp(we1 + we2 * 0.85, 0.0, 1.0));
         aboutColor = mix(aboutColor, vec3(0.012, 0.016, 0.024), clamp(wd * 1.15, 0.0, 0.92));
+        // Pull the saturated fluid hues toward the dark canvas so foreground text stays clear.
+        aboutColor = mix(vec3(0.012, 0.016, 0.024), aboutColor, 0.58);
 
         vec3 finalColor = mix(heroColor, aboutColor, smoothstep(0.0, 1.0, u_sectionMix));
         float dither = fract(sin(dot(gl_FragCoord.xy + u_time, vec2(12.9898, 78.233))) * 43758.5453);
