@@ -33,12 +33,12 @@
 @media(max-width:600px){.tool-pyramid{gap:9px;padding:16px 0}.tool-row{gap:7px;flex-wrap:wrap}.tool-item{width:clamp(55px,16vw,68px);height:76px;gap:6px;border-radius:12px}.tool-item img{width:23px;height:23px}.tool-item span{font-size:8px}.project-tech-icons{gap:9px 12px}.project-tech-icons>span{font-size:8px}}
 .tool-item img{transition:filter .25s ease,opacity .25s ease,background-color .25s ease,padding .25s ease}
 .tool-item:hover img{filter:none;opacity:1}
-.tool-item>.github-mark{position:relative;display:grid;width:34px;height:34px;flex:0 0 auto;place-items:center;border-radius:11px;color:transparent;font-size:0;line-height:0;transition:width .25s ease,height .25s ease,border-radius .25s ease,background .25s ease,box-shadow .25s ease}
-.github-mark::before{content:"";position:absolute;width:0;height:0;border-radius:50%;background:#fff;transition:width .25s ease,height .25s ease}
-.tool-item>.github-mark img{position:relative;z-index:1;width:26px;height:26px;filter:grayscale(1) brightness(0) invert(.76);transition:filter .25s ease,opacity .25s ease}
-.tool-item[title="GitHub"]:hover>.github-mark{width:54px;height:54px;border-radius:14px;background:linear-gradient(145deg,#b56aff,#7228ea 70%,#5b18d4);box-shadow:0 7px 20px rgba(118,42,233,.4)}
-.tool-item[title="GitHub"]:hover>.github-mark::before{width:38px;height:38px}
-.tool-item[title="GitHub"]:hover>.github-mark img{filter:brightness(0) saturate(100%) invert(15%) sepia(71%) saturate(5228%) hue-rotate(259deg) brightness(91%) contrast(104%);opacity:1}
+.tool-item>.github-mark{position:relative;display:grid;width:34px;height:34px;flex:0 0 auto;place-items:center;border-radius:50%;background:#000;box-shadow:0 2px 5px rgba(0,0,0,.45);color:transparent;font-size:0;line-height:0;transition:width .25s ease,height .25s ease,border-radius .25s ease,background .25s ease,box-shadow .25s ease}
+.tool-item>.github-mark img{position:absolute;z-index:1;width:34px;height:34px;object-fit:contain;filter:none;opacity:1;transition:width .25s ease,height .25s ease,filter .25s ease,opacity .25s ease}
+.tool-item>.github-mark .github-mark-hover{width:38px;height:38px;opacity:0}
+.tool-item[title="GitHub"]:hover>.github-mark{width:54px;height:54px;border-radius:14px;background:linear-gradient(145deg,#c079ff 0%,#8b35f2 58%,#6821d8 100%);box-shadow:0 0 0 1px rgba(205,160,255,.35),0 0 14px rgba(160,80,255,.72),0 0 30px rgba(118,42,233,.58),0 7px 20px rgba(118,42,233,.4)}
+.tool-item[title="GitHub"]:hover>.github-mark .github-mark-rest{opacity:0}
+.tool-item[title="GitHub"]:hover>.github-mark .github-mark-hover{opacity:1}
 .project-tech-icons>span:hover img{filter:none;opacity:1}
 .tool-item[title="AWS"] img{width:42px;height:30px;object-fit:contain}
 @media(max-width:850px){.honors{grid-template-columns:repeat(2,minmax(0,1fr))}.honors-label{grid-column:1/-1}}
